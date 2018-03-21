@@ -1,0 +1,8 @@
+bri=set(['brazil','russia','india'])
+print('russia' in bri)
+print('usa' in bri)
+bric=bri.copy()
+bric.add('china')
+bri.remove('russia')
+print(bric.issuperset(bri))
+print(bri&bric)
