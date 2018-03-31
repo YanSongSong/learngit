@@ -1,0 +1,62 @@
+Python学习日记（来自为了一个垃圾题目浪费了一小时的人）：
+	先上题目：
+	Tax Computation
+
+	1. 编写一个简单的程序，计算订单税额。
+	2. 程序从控制台接受输入，输入内容为：
+		1. 用户订单金额order_amount，整数，单位$。
+		2. 用户所在州state，字符串。
+			1. 用户所在州的输入范围如下4个：WI(维斯康星州),AK(阿拉斯加州),NJ(新泽西州),DE(特拉华州)。
+			2. 测试用例中输入不会超出输入范围。
+	3. 根据不同的州，计算方式不同。规则如下：
+		1. 如果是维斯康星州，即输入'WI'，必须加收5%的税。
+		2. 如果是新泽西州，即输入'NJ'，必须加收6.63%的税。
+		3. 对于其他州，不加收税。
+	4. 程序结果输出到控制台，输出内容为：
+		1. 如果该州不收税，输出订单金额。
+		2. 如果该州收税，依次输出订单金额，订单税额和总费用。
+		3. 输出时所有金额数字保留2位小数，第3位以后小数向上舍入。
+		4. 输出格式见示例。
+
+	项目说明：
+
+	>src目录下为题目代码源文件，需要完成的内容为tax_computation.py里的compute_tax()方法。
+	>src目录下的__init__.py文件不需要改动。
+	>
+	>test目录下为测试用例文件，不可进行修改。
+
+	示例：	
+
+		case1:
+		输入：
+	  	What is the order amount? 10
+	  	What is the state? WI
+		输出：
+	  	The subtotal is $10.00.
+	  	The tax is $0.50.
+	  	The total is $10.50.
+		case2:
+		输入：
+	  	What is the order amount? 10
+	  	What is the state? DE
+		输出：
+	  	The total is $10.00.
+	
+	这回咱们直接上代码：
+	def compute_tax():
+    	order_amount=int(input('What is the order amount?'))
+    	state=str(input('What is the state?'))
+    	if state=='WI':
+        	print('The subtotal is $'+str(order_amount)+'.00.')
+        	print('The tax is $'+str('%.2f'%round(order_amount*0.05+0.0049,2))+'.')
+        	print('The total is $'+str('%.2f'%round(order_amount+order_amount*0.05+0.0049,2))+'.')
+    	elif state=='NJ':
+        	print('The subtotal is $'+str(order_amount)+'.00.')
+        	print('The tax is $'+str('%.2f'%round(order_amount*0.0663+0.0049,2))+'.')
+        	print('The total is $'+str('%.2f'%round(order_amount+order_amount*0.0663+0.0049,2))+'.')
+    	else:
+        	print('The total is $'+str(order_amount)+'.00.')
+    写个注释好吧：'%.2f'保证保留两位小数，不然会被round搞(和round的工作机制有关，具体看https://www.cnblogs.com/anpengapple/p/6507271.html和https://www.zhihu.com/question/31156619)
+    round(order_amount*0.05+0.0049,2):加那个0.049保证向上取（其实还不够精确）
+    反正这个题极其蛋疼
+

@@ -1,0 +1,23 @@
+Python学习日记（转义字符篇）：
+	题目要求：
+		> 1. 使用转义字符打印引号本身
+		> 2. 完成函数 print_quote 的实现，这个函数包括两个参数，person 和 sentence，按照样例的格式在控制台输出作者和引语
+
+		项目说明
+			>src目录下为题目代码源文件，需要完成的内容为 print_quote.py 里的方法。
+			>src目录下的 __init__.py 文件不需要改动。
+			>
+			>test目录下为测试用例文件，不可进行修改。
+
+		示例：
+
+    		print_quote("Jack" "You jump, I jump!")
+    
+    		输出：(不包含每行开头的‘* ’部分；不要输出额外的内容，否则会影响结果判断的正确性)
+    		* Jack says,"You jump, I jump!"
+    代码：
+    	def print_quote(person,sentence):
+    		print(person+' says,'+"\""+sentence+"\"")
+    Key Point:
+    	转义字符："\"
+    	详情见：http://www.runoob.com/python/python-strings.html
