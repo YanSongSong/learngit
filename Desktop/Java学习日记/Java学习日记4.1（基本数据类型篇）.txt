@@ -1,0 +1,87 @@
+Java学习日记（基本数据类型篇）：
+	基本数据类型的特点什么的请参照http://www.runoob.com/java/java-basic-datatypes.html
+	咱们来讲讲其中需要注意的一些点：
+		1.常量在程序运行时不能被修改，在Java中用final来修饰常量
+		通常为了便于识别，使用大写字母来修饰常量，如：
+		final double PI=3.1415926
+
+		2.byte,int,long,short可以使用十进制，十六进制或八进制表示
+		当使用常量时，前缀是0的表示八进制，前缀是0x的表示十六进制
+		上个代码好吧：
+			public class DataType {
+				public static void main(String[] args) {
+					int a=0xA2;
+					System.out.println("a="+a);
+					int b=012;
+					System.out.println("b="+b);
+				}
+			}
+			console:a=162
+					b=10
+
+		3.数据类型转换必须满足如下规则：
+			1. 不能对boolean类型进行类型转换。
+			2. 不能把对象类型转换成不相关类的对象。
+			3. 在把容量大的类型转换为容量小的类型时必须使用强制类型转换。
+			4. 转换过程中可能导致溢出或损失精度,例如： 			
+			    int i =128;   
+				byte b = (byte)i; 			因为 byte 类型是 8 位，最大值为127，所以当 int 强制转换为 byte 类型时，值 128 时候就会导致溢出。
+			5. 浮点数到整数的转换是通过舍弃小数得到，而不是四舍五入，例如：  			(int)23.7 == 23;        
+				(int)-45.89f == -45
+
+		4.自动的数据类型转换：
+			必须满足转换前的数据类型的位数要低于转换后的数据类型，例如: short数据类型的位数为16位，就可以自动转换位数为32的int类型，同样float数据类型的位数为32，可以自动转换为64位的double类型。
+			char也可以转换成int型，这时候得到的是ascii码
+			Java 里使用 long 类型的数据一定要在数值后面加上 L，否则将作为整型解析
+
+		5.杂七杂八：
+			.short a = 1;
+			short b = 2;
+			那么 a+b 是什么类型？
+			答：在java的世界里，如果比int类型小的类型做运算，java在编译的时候就会将它们统一强转成int类型。当是比int类型大的类型做运算，就会自动转换成它们中最大类型那个。
+			14.   char a = 'S'; char 后面赋值要用单引号，因为是字符型数据类型
+			String a = "I AM FINE"; String 后面赋值要用双引号，因为是字符串数据类型
+
+		6.重点：
+			1.包装类的过渡类型转换：
+				一般情况下，我们首先声明一个变量，然后生成一个对应的包装类，就可以利用包装类的各种方法进行类型转换了。例如：
+				当希望把float型转换为double型时：
+				float f1=100.00f;
+				Float F1=new Float(f1);
+				double d1=F1.doubleValue();//F1.doubleValue()为Float类的返回double值型的方法
+				简单类型的变量转换为相应的包装类，可以利用包装类的构造函数。即：Boolean(boolean value)、Character(char value)、Integer(int value)、Long(long value)、Float(float value)、Double(double value)
+				而在各个包装类中，总有形为××Value()的方法，来得到其对应的简单类型数据。利用这种方法，也可以实现不同数值型变量间的转换，例如，对于一个双精度实型类，intValue()可以得到其对应的整型变量，而doubleValue()可以得到其对应的双精度实型变量。
+			上代码：
+				public class ChangeType {
+					public static void main(String[] args) {
+						float a=100.98f;
+						Float F1=new Float(a);
+						double b=F1.doubleValue();		
+						System.out.println("b="+b);//上面的是float转double
+						int s=2;
+						Long s1=new Long(s);
+						long d=s1.longValue();
+						System.out.println("d="+d);//上面的是int转long
+					}
+				}
+
+			2、字符串与其它类型间的转换
+				其它类型向字符串的转换
+				调用类的串转换方法:X.toString();
+				自动转换:X+"";
+				使用String的方法:String.valueOf(X);
+				上代码：
+					public class ToString {
+						public static void main(String[] args) {
+							int a=34;
+							int b=12;
+							int c=89;
+							Integer X1=new Integer(a);
+							Integer X2=new Integer(b);
+							Integer X3=new Integer(c);
+							X1.toString();//第一种搞法
+							String.valueOf(X3);//第三种搞法
+							System.out.println(X1+"yeee"+X2+""+X3);//第二种搞法
+						}
+					}
+			
