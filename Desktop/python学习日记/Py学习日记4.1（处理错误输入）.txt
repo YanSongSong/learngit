@@ -1,0 +1,60 @@
+Python学习日记（处理错误输入）：
+	先晒题目：
+		Handle Wrong Input
+
+		>1.处理错误的输入：
+		>
+		>回报率72规则是快速评估资产翻番所需时间的一个方法，就是用72除以预期回报率，得到预期年数。它可以帮助我们计算股票，债券或者是存款是否适合自己。
+		>即公式为：
+		>年数 = 72/r
+		>其中，r为设定回报率
+
+		>
+		>回报率r，正常情况下为正整数
+		>如果r的值为0或是非数字值，则提醒用户输入错误并等待用户输入正确的值
+		>如果输出正确，则返回预期年数，并结束询问
+		>
+		>程序结果输出到控制台
+		>
+		>r的输入错误时，输出内容为：
+		>Sorry. That is not a valid input.
+		>
+		>r的输入正确时，输出内容为：
+		>It will take '年数' years to double your initial investment.
+		>年数保留1位小数
+
+		项目说明：
+
+		>src目录下为题目代码源文件，需要完成的内容为handle_error_input.py里的方法。
+		>src目录下的__init__.py文件不需要改动。
+		>
+		>test目录下为测试用例文件，不可进行修改。
+
+
+		示例：
+
+			输入：
+			  What is the rate of return?0
+			输出
+			  Sorry. That is not a valid input.
+		    输入：
+		      What is the rate of return?ABC
+		    输出
+			  Sorry. That is not a valid input.
+			 输入：
+		      What is the rate of return?4
+		    输出
+			  It will take 18.0 years to double your initial investment.
+
+	再给代码：
+		def handle():
+    		while True:
+		        r=str(input('What is the rate of return?'))
+		        if (r.isdigit() and int(r)!=0):
+		            print('It will take {} years to double your initial investment.'.format('%.1f'%round(72/int(r),1)))
+		            break
+		        else:
+		            print('Sorry. That is not a valid input.')
+
+	Key Points：
+		容易遇到的一个坑是接受输入的可能会是00000000这种蛋疼东西。。。所以不能用str(r)!=0...
