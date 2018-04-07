@@ -1,0 +1,6 @@
+package junkCode;
+
+public class Operator {
+	static int a=3;
+	System.out.println(~a+1);
+}

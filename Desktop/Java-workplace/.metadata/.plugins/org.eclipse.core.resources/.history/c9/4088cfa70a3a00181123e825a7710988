@@ -1,0 +1,12 @@
+package junkCode;
+
+public class TestOok {
+
+}
+class Ook extends Mammal{
+	public Ook(String name) {
+		super(name);
+		System.out.println("Mou~");
+	}
+	public 
+}

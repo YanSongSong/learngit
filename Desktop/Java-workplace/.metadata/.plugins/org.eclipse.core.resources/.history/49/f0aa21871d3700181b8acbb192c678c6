@@ -1,0 +1,11 @@
+package junkCode;
+
+public class StringBuffer {
+	public static void main(String[] args) {
+		StringBuffer a=new StringBuffer("菜鸟教程官网:");
+		a.append("www.");
+		a.append("runoob");
+		a.append(".com");
+		System.out.println(a);
+	}
+}

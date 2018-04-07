@@ -1,0 +1,29 @@
+package junkCode;
+
+public class TestDog {
+	public static void main(String[] args) {
+		Mammal a=new Mammal("鸽子");
+		a.SayHi();
+		Mammal b=new Cat("猫");
+		b.SayHi();
+	}
+}
+class Mammal{
+	private String name;
+	public Mammal(String name) {
+		this.name=name;
+		System.out.println("My name is:"+this.name);
+	}
+	public void SayHi(){
+		System.out.println("Hi");
+	}
+}
+class Cat extends Mammal{
+	public Cat(String name) {
+		super(name);
+		System.out.println("WtyBill");
+	}
+	public void SayHi() {
+		System.out.println("Hello");
+	}
+}

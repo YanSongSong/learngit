@@ -1,0 +1,9 @@
+package junkCode;
+
+public class MethodInStringBuffer {
+	public static void main(String args[]) {
+		StringBuffer b=new StringBuffer("Am");
+		b.reverse();
+		System.out.println(b);
+	}
+}

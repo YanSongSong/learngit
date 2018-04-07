@@ -1,0 +1,10 @@
+package junkCode;
+
+public class ToString {
+	public static void main(String[] args) {
+		int a=34;
+		Integer X1=new Integer(a);
+		X1.toString();
+		System.out.println(X1+"yeee");
+	}
+}

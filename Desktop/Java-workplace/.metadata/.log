@@ -23,3 +23,56 @@ org.apache.http.client.HttpResponseException: Service Temporarily Unavailable
 	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
 	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
 	at java.base/java.lang.Thread.run(Thread.java:844)
+!SESSION 2018-04-01 17:08:48.963 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=10
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN_#Hans
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-01 17:08:57.242
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2018-04-02 18:41:33.190 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=10
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN_#Hans
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-02 18:41:40.963
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2018-04-03 10:08:01.235 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=10
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN_#Hans
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-03 10:08:11.306
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2018-04-04 09:24:21.885 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=10
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN_#Hans
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-04 09:24:29.308
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-04-04 09:24:40.583
+!MESSAGE No repository found at file:/Users/JohnTitor/eclipse/java-oxygen/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/183/data/listener_1925729951/.
+!SESSION 2018-04-07 09:41:42.830 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=10
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN_#Hans
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/JohnTitor/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-07 09:41:53.912
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
